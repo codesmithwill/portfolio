@@ -139,6 +139,70 @@ body {
     border: 4px solid var(--cor_terciaria);
 }
 
+.especialidades {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+.linguagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    padding: 20px 0; /* Remove o padding lateral para ocupar a largura total */
+    width: 100%; /* Garante que o contêiner ocupe 100% da largura disponível */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+.titulo-centralizado {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    font-family: var(--fonte_principal);
+    padding-bottom: 50px;
+}
+
+.titulo-centralizado::selection {
+    background: var(--cor_terciaria);
+}
+
+.conteudo {
+    display: flex;
+    gap: px;
+    justify-content: space-between; /* Ajuste o espaço entre as seções */
+    width: 100%; /* Garante que as seções ocupem a largura total do contêiner */
+    max-width: 1200px; /* Limita a largura máxima para um layout controlado */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+.html, .css, .js {
+    text-align: center;
+    flex: 1;
+    margin: 0 15px; /* Adiciona margem uniforme às seções */
+}
+
+.html .titulo, .css .titulo, .js .titulo {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--fonte_principal);
+    padding-bottom: 16.5px;
+}
+
+.html .ling-logo:hover, .css .ling-logo:hover, .js .ling-logo:hover {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.html .desc, .css .desc, .js .desc {
+    padding-top: 16.5px;
+    font-family: var(--fonte_secundaria);
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
 .rodape {
     padding: 24px;
     color: var(--cor_secundaria);
@@ -179,23 +243,6 @@ body {
 .sobremim .apresentacao__conteudo__titulo:hover {
     color: red;
     transition: color 1.5s;
-}
-
-@media (max-width: 1349px) {
-    .aboutme {
-        flex-direction: column-reverse;
-        padding: 5%;
-        text-align: center;
-    }
-
-    .aboutme__conteudo {
-        padding: 5%;
-        width: auto;
-    }
-
-    .apresentacao__imagem {
-        width: 50%;
-    }
 }
 
 .projetos .apresentacao {
@@ -242,6 +289,24 @@ body {
     }
 
     .apresentacao__imagem {
+        width: 50%;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        gap: 100px
+    }
+
+    .sobremim {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .sobremim .apresentacao__conteudo {
+        width: auto;
+    }
+
+    .sobremim .apresentacao__imagem {
         width: 50%;
     }
 }
